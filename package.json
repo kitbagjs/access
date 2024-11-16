@@ -1,0 +1,44 @@
+{
+  "name": "@kitbag/access-kit",
+  "private": false,
+  "version": "0.0.1",
+  "bugs": {
+    "url": "https://github.com/kitbagjs/access-kit/issues"
+  },
+  "homepage": "https://github.com/kitbagjs/access-kit#readme",
+  "scripts": {
+    "build": "tsc && vite build",
+    "build:watch": "tsc && vite build --watch",
+    "dev": "vite",
+    "lint": "eslint ./src",
+    "lint:fix": "eslint ./src --fix",
+    "test": "vitest",
+    "types": "tsc --noEmit",
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs"
+  },
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/kitbag-access-kit.umd.cjs",
+  "module": "./dist/kitbag-access-kit.js",
+  "types": "./dist/kitbag-access-kit.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/kitbag-access-kit.js",
+      "require": "./dist/kitbag-access-kit.umd.cjs"
+    }
+  },
+  "devDependencies": {
+    "@kitbag/eslint-config": "1.0.1",
+    "@vitejs/plugin-vue": "^5.0.4",
+    "eslint": "9.14.0",
+    "typescript": "^5.4.3",
+    "vite": "^5.4.8",
+    "vite-plugin-dts": "^3.8.1",
+    "vitepress": "^1.0.1",
+    "vitest": "^2.1.4"
+  }
+}
