@@ -2,6 +2,7 @@
   "name": "@kitbag/access-kit",
   "private": false,
   "version": "0.0.1",
+  "description": "Type safe attribute-based access control flow",
   "bugs": {
     "url": "https://github.com/kitbagjs/access-kit/issues"
   },
