@@ -9,3 +9,6 @@ export type AllPropertiesAreOptional<T> = undefined extends T
   : Record<string, unknown> extends T
     ? true
     : false
+
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export type AnyFunction = (...args: any[]) => any

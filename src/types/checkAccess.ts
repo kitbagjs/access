@@ -10,6 +10,12 @@ type RuleParameters<
   TAction extends Action<TRules, TResource>
 > = Parameters<AccessRuleMap<TRules, TResource, TAction>['rule']>[0]
 
+export type RuleReturns<
+  TRules extends AccessRules,
+  TResource extends Resource<TRules>,
+  TAction extends Action<TRules, TResource>
+> = ReturnType<AccessRuleMap<TRules, TResource, TAction>['rule']>
+
 type CheckAccessArgs<
   TRules extends AccessRules,
   TResource extends Resource<TRules>,
@@ -21,4 +27,4 @@ type CheckAccessArgs<
 export type CheckAccess<TRules extends AccessRules> = <
   const TResource extends Resource<TRules>,
   const TAction extends AccessRuleMap<TRules, TResource>['action']
->(resource: TResource, action: TAction, ...args: CheckAccessArgs<TRules, TResource, TAction>) => boolean
+>(resource: TResource, action: TAction, ...args: CheckAccessArgs<TRules, TResource, TAction>) => RuleReturns<TRules, TResource, TAction>
