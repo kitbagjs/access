@@ -4,9 +4,8 @@ import { AccessCallback } from '@/types/accessCallback'
 export type AccessRuleMap<
   TRules extends AccessRules,
   TResource extends string,
-  TAction extends string = string,
-  RuleType extends boolean | AccessCallback = boolean | AccessCallback
+  TAction extends string = string
 > = Extract<
   TRules[number],
-  { resource: TResource, action: TAction, rule: RuleType }
+  { resource: TResource, action: TAction, rule: AccessCallback }
 >

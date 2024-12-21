@@ -1,8 +1,8 @@
-import { Abac } from '@/types/abac'
+import { AccessControl } from '@/types/accessControl'
 import { AccessRules } from '@/types/accessRule'
 import { createCheckAccess } from '@/services/checkAccess'
 
-export function createAbac<const TRules extends AccessRules>(rules: TRules): Abac<TRules> {
+export function createAccessControl<const TRules extends AccessRules>(rules: TRules): AccessControl<TRules> {
   const checkAccess = createCheckAccess(rules)
 
   return {
