@@ -1,4 +1,4 @@
-import { addAccessRule } from '@/services/addAccessRule'
+import { createAccessRule } from '@/services/createAccessRule'
 import { createAccessControl } from '@/services/createAccessControl'
 import { loadAccessRules } from '@/services/loadAccessRules'
 
@@ -13,5 +13,5 @@ import { Register, RegisteredRules } from '@/types/register'
 const access = createAccessControl([])
 
 export default access as AccessControl<RegisteredRules>
-export { addAccessRule, createAccessControl, loadAccessRules }
+export { createAccessRule, createAccessControl, loadAccessRules }
 export type { AccessCallback, AccessControl, AccessRule, AccessRuleNotFoundError, AccessRuleTypeError, CheckAccess, Register }

@@ -13,11 +13,10 @@ export default defineConfig({
   },
   build: {
     lib: {
-      entry: resolve(__dirname, 'src/index.ts'),
-      name: 'access',
-      fileName: 'access',
-      formats: ['cjs', 'es', 'iife', 'umd'],
+      entry: resolve(__dirname, 'src/main.ts'),
+      name: '@kitbag/access',
+      fileName: 'kitbag-access',
     },
   },
-  plugins: [dts()],
+  plugins: [dts({ rollupTypes: true })],
 })
