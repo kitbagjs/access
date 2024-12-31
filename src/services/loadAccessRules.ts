@@ -36,6 +36,6 @@ export function loadAccessRules<
 function isValidAccessRule(value: unknown): boolean {
   return !!value && typeof value === 'object'
     && 'resource' in value && typeof value.resource === 'string'
-    && 'TAction' in value && typeof value.TAction === 'string'
+    && 'action' in value && typeof value.action === 'string'
     && 'rule' in value && typeof value.rule === 'function'
 }
