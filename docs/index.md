@@ -4,15 +4,15 @@ layout: home
 
 hero:
   name: "Kitbag Access"
-  text: "Type safe rbac/abac"
-  tagline: My great project tagline
+  image: "/kitbag-logo.svg"
+  tagline: Type safe attribute-based access control flow
   actions:
     - theme: brand
-      text: Markdown Examples
-      link: /markdown-examples
+      text: Get Started
+      link: /introduction
     - theme: alt
-      text: API Examples
-      link: /api-examples
+      text: Documentation
+      link: /whatever-is-first
 
 features:
   - title: Feature A
