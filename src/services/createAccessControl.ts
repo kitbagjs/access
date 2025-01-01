@@ -41,19 +41,19 @@ export function createAccessControl<const TRules extends AccessRules>(accessRule
     ruleMap.clear()
   }
 
-  const checkAccess: AccessControl<TRules>['checkAccess'] = (
+  const can: AccessControl<TRules>['can'] = (
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     resource: string, action: string, context?: any,
   ) => {
     const { rule } = getAccessRule(resource, action)
 
-    return rule(context) as RuleReturns<TRules, string, string>
+    return rule(context ?? {}) as RuleReturns<TRules, string, string>
   }
 
   return {
     register,
     has,
     clear,
-    checkAccess,
+    can,
   }
 }

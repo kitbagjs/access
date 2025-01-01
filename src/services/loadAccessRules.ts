@@ -1,4 +1,3 @@
-import access from '@/main'
 import { AccessRuleTypeError } from '@/types/accessRuleTypeError'
 import { AnyFunction } from '@/types/utilities'
 
@@ -27,8 +26,6 @@ export function loadAccessRules<
   if (!rulesToLoad.every(isValidAccessRule)) {
     throw new AccessRuleTypeError()
   }
-
-  access.register(rulesToLoad)
 
   return rulesToLoad
 }
