@@ -12,14 +12,14 @@ hero:
       link: /introduction
     - theme: alt
       text: Documentation
-      link: /whatever-is-first
+      link: /getting-started
 
 features:
-  - title: Feature A
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature B
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature C
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+  - title: Type Safe
+    details: Discoverable access checks with type safe arguments.
+  - title: Simple
+    details: Simple to set up, simple to use, hard to break, 9.77 kB unpacked.
+  - title: Not Opinionated
+    details: Works well for RBAC, ABAC, any complex access control rules.
 ---
 

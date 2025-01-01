@@ -18,15 +18,36 @@ export default defineConfig({
       { text: 'Guide', link: '/' },
     ],
 
-    sidebar: [
-      {
-        text: 'Examples',
-        items: [
-          { text: 'Markdown Examples', link: '/markdown-examples' },
-          { text: 'Runtime API Examples', link: '/api-examples' }
-        ]
-      }
-    ],
+    sidebar: {
+      '/': [
+        {
+          text: 'Getting Started',
+          items: [
+            {
+              text: 'Introduction',
+              link: '/introduction',
+            },
+            {
+              text: 'Quick Start',
+              link: '/getting-started',
+            },
+          ],
+        },
+        {
+          text: 'Guide',
+          items: [
+            {
+              text: 'Defining Rules',
+              link: '/defining-rules',
+            },
+            {
+              text: 'Auto Importing Rules',
+              link: '/auto-importing-rules',
+            },
+          ],
+        },
+      ],
+    },
 
     socialLinks: [
       {
